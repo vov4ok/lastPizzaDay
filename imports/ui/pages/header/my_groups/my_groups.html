@@ -1,0 +1,12 @@
+<template name='myGroups'>
+	<li class="dropdown"> <a href="#" class="dropdown-toggle"
+			data-toggle="dropdown" role="button" aria-haspopup="true"
+			aria-expanded="false">My Groups <span class="caret"></span></a>
+		<ul class="dropdown-menu">
+			{{#each arrayMyGroup}}
+			{{> group}}
+			{{/each}}
+		</ul>
+	</li>
+</template>
+

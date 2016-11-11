@@ -1,0 +1,31 @@
+<template name="menu">
+	{{ #if sugned }}
+	{{ #if choice }}
+	<div class="row text-uppercase">
+		<div class="col-sm-1 text-center"> #/# </div>
+		<div class="col-sm-5 text-center"> name </div>
+		<div class="col-sm-3 text-center"> price </div>
+		<div class="col-sm-3 text-center"> order </div>
+	</div>
+	{{#each menuList}}
+		{{> itemMenu}}
+	{{/each}}
+	{{> newItemMenu }}
+	<div class="row">
+		<div class="col-sm-12 text-right">
+			<button type="button" class="btn btn-primary make_order"> Order </button>
+		</div>
+	</div>
+	{{ else }}
+	<h1>You ignor Event </h1>
+	{{ /if }}
+	{{ else }}
+	<div class="row">
+		<div class="col-sm-12 text-center">
+			<button class="btn btn-primary sub_event" type="button">subscribe</button>
+			<button class="btn btn-primary ignore_event" type="button">ignore</button>
+		</div>
+	</div>
+	{{ /if }}
+</template>
+

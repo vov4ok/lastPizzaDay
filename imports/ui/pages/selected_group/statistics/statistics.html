@@ -1,0 +1,18 @@
+<template name="statistics">
+	<div class="row">
+		{{ #with some }}
+		<div class="col-sm-2 text-center col-sm-offset-3">{{ this.all }} 
+			<span class="glyphicon glyphicon-globe"></span>
+		</div>
+		<div class="col-sm-2 text-center ">{{ this.subscribe }}
+			<span class="glyphicon glyphicon-thumbs-up"></span>
+		</div>
+		<div class="col-sm-2 text-center">{{ this.ignore }}
+			<span class="glyphicon glyphicon-thumbs-down"></span>
+		</div>
+		<!--<div class="col-sm-2  text-right">Ignor</div>-->
+		{{ /with }}
+	</div>
+
+</template>
+

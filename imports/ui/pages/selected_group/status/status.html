@@ -1,0 +1,16 @@
+<template name="status">
+	{{ #with some }}
+	<div class="row">
+		<div class="col-sm-4 text-center"> {{ this.date }} </div>
+		<div class="col-sm-4 text-center"> {{ this.status }} </div>
+		{{ #if isOwner }}
+		<div class="col-sm-4 text-center">
+			<div class="btn btn-primary btn-sm prev_event_status glyphicon glyphicon-arrow-down"></div>
+			<div class="btn btn-primary btn-sm next_event_status glyphicon glyphicon-arrow-up"></div>
+		</div>
+		{{ /if }}
+	</div>
+	{{ /with }}
+
+</template>
+

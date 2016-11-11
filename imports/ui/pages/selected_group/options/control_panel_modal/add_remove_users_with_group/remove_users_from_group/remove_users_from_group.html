@@ -1,0 +1,8 @@
+<template name="removeUsersFromGroup">
+	<form class="form-horizontal to_remove">
+		{{ #each removeUsers }}
+		{{> removeUserFromGroup }}
+		{{ /each }}
+	</form>
+</template>
+

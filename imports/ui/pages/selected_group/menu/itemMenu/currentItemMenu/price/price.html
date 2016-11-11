@@ -1,0 +1,15 @@
+<template name="price">
+
+	<div class="row">
+		<div class="col-sm-6 text-right price_item">
+			{{ this.price }}$
+		</div>
+		<div class="col-sm-6 text-left ">
+			{{ #if this.discount }}
+			<span class="badge">- {{ this.discount }} SKU</span>
+			{{ /if }}
+		</div>
+	</div>
+
+</template>
+

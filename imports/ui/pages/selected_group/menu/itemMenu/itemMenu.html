@@ -1,0 +1,12 @@
+<template name="itemMenu">
+
+	{{ #if toggleEdit }}
+		{{> currentItemMenu }}
+	{{ else }}
+		{{ #with cancelEdit }}
+			{{> editItemMenu this}}
+		{{ /with }}
+	{{ /if }}
+
+</template>
+

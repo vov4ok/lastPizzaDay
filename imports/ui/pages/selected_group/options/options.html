@@ -1,0 +1,18 @@
+<template name="options">
+	<ul>
+		{{ #if thisIsOwner }}
+		{{ #unless eventExists }}
+		<li class="create_event" ><a href="#" >create event</a></li>
+		{{ else }}
+		<li class="remove_event" ><a href="#" >remove event</a></li>
+		{{ /unless }}
+		{{ #if sendEmail }}
+		<li class="send_email" ><a href="#" >send Email</a></li>
+		{{ /if }}
+		<li><a href="#" data-toggle="modal" data-target="#modal-controlGroup">control group</a></li>
+		<li class="delete_group" ><a href="#" >delete</a></li>
+		{{ /if }}
+	</ul>
+	{{> controlPanelModal }}
+</template>
+

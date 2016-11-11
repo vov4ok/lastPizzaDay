@@ -1,0 +1,25 @@
+<template name="ticket">
+
+	<div class="row text-uppercase">
+		<div class="col-sm-4 text-center"> name </div>
+		<div class="col-sm-2 text-center"> count </div>
+		<div class="col-sm-3 text-center"> price </div>
+		<div class="col-sm-3 text-center"> discounted </div>
+	</div>
+	{{ #each ticket }}
+	<div class="row text-uppercase">
+		<div class="col-sm-4 text-left"> {{ this.name }} </div>
+		<div class="col-sm-2 text-center"> {{ this.count }} </div>
+		<div class="col-sm-3 text-center"> {{ this.price }} </div>
+		<div class="col-sm-3 text-center"> {{ this.discounted }} </div>
+	</div>
+	{{ /each }}
+	<div class="row">
+	{{ #with result }}
+		<div class="col-sm-3 col-sm-offset-6 text-center">  Price: {{ this.price }}$  </div>
+		<div class="col-sm-3 text-center">  To Pay: {{ this.toPay }}$ </div>
+	{{ /with }}
+	</div>
+</template>
+
+

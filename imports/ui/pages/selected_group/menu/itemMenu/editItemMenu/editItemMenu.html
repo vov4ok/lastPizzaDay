@@ -1,0 +1,46 @@
+<template name="editItemMenu">
+
+	<div class="col-sm-5 col-sm-offset-1 text-left">
+		<form class="form-inline">
+			<div class="form-group
+				{{#if correctName}}
+					has-success
+				{{else}}
+					has-error
+				{{/if}} has-feedback">
+				<input type="text" name="editNameItem" class="form-control" value="{{
+				../../name }}">
+				<span class="glyphicon
+					{{#if correctName}}
+						glyphicon-ok
+					{{else}}
+						glyphicon-remove
+					{{/if}} form-control-feedback" aria-hidden="true"></span>
+			</div>
+		</form>
+	</div>
+	<div class="col-sm-3 text-left">
+		<form class="form-inline">
+			<div class="form-group {{#if correctPrice}}
+				has-success
+				{{else}}
+				has-error
+				{{/if}} has-feedback">
+				<input type="text" name="editPriceItem" class="form-control"
+				style="width:100%;" value="{{ ../../price }}">
+				<span class="glyphicon {{#if correctPrice}}
+						glyphicon-ok
+					{{else}}
+						glyphicon-remove
+					{{/if}} form-control-feedback" aria-hidden="true"></span>
+			</div>
+		</form>
+	</div>
+	<div class="col-sm-3 text-center">
+		<button type="button" class="btn btn-primary update_menu_item" >Update</button>
+		<button type="button" class="btn btn-primary cancel_menu_item" >Cancel</button>
+	</div>
+
+
+</template>
+
